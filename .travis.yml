@@ -1,16 +1,17 @@
-# version of node
-# install packages
-# run tests
-# deploy
-
 language: node_js
-
 node_js:
-    - '5.0'
-    - '4.1'
-    - '4.0'
-    - '0.12'
-    - '0.11'
+- '5.0'
+- '4.1'
+- '4.0'
+- '0.12'
+- '0.11'
 before_script:
-    - npm install -g mocha
+- npm install -g mocha
 script: mocha
+deploy:
+  provider: heroku
+  api_key:
+    secure: iAYTK+IObZGVzqidAl05lTVzkJm8G+7VVhoFBv5CPmmHm3xtZYKfCV/IzlB5BtRB46+qFA0VL+5kBI6J+BcBO6HpPLfN5fo8nyP3+9Fm8ja41qDDojj5PRygfG2/IR6vj5uW4/fRMENVNcpv7uCx2Df79l0CVcMFB0lkf7wezCLUGZ2XAFfYVRtsrlzDtGOLRH7Chy6+nQb6bmWHrUHQiXC8KTprOeEkPo68NLUCWSEqg9Mb7t9swcwbuSENHeM06bOGGlIhx47FGIXUIzcJBE+JXdEb1TdtghKxYdjy2pA2FVUweLx3C78fgm5krwqhNILhwKe0oMDepWlxKa5lyQehnzZ+oS5/EQC+sNC848doJXpHbkKodkyhdZpPmTy0gHuZk+GArymdTUIRQGkRVEI2UnGcXaRFdo/H/ti/cp8BZF82+O1jnexhGnE+Dl9AjH538B4D2EYojRsYfm9g92IyNmD22G7JbBUS3iJBp3RScnWbp0BWzTCtk+63iT0v/jSZu3bcLSbzh7p/T8Xco8TqinCEV+vnT3yUGgJSj05YtcVZzFg2c4EEPhJMBHoO+l0D8sAtTLcbZGYepTaeM527dFdQmjzhVvtd5cvSSDFL4tQprVBWfKJNVTpx481cXT2WuxN7Fiqk7Ip54Ixrm5qrV3FyqYPsubmt2ODqw8I=
+  app: fierce-sea-1495
+  on:
+    repo: brandon932/guestFeedback
