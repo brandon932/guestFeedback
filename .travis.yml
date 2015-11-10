@@ -1,0 +1,16 @@
+# version of node
+# install packages
+# run tests
+# deploy
+
+language: node_js
+
+node_js:
+    - '5.0'
+    - '4.1'
+    - '4.0'
+    - '0.12'
+    - '0.11'
+before_script:
+    - npm install -g mocha
+script: mocha
