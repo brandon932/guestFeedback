@@ -1,7 +1,7 @@
 process.env.NODE_ENV = 'test';
 
+var mocha = require('mocha');
 var chai = require('chai');
-var mocha = require('moacha');
 var chaiHttp = require('chai-http');
 var server = require('../src/server/app.js');
 
